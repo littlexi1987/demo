@@ -19,6 +19,7 @@
         <start-class>com.example.spring.task.Test</start-class>
     </properties>
 
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
