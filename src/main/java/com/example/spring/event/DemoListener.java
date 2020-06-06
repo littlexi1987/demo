@@ -9,7 +9,7 @@ public class DemoListener implements ApplicationListener<DemoEvent> {
     @Override
     public void onApplicationEvent(DemoEvent demoEvent) {
         String message = demoEvent.getMessage();
-        System.out.println("demoListener 收到了 " + message);
+        System.out.println("demoListener Received: " + message);
     }
 
 }

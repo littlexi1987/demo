@@ -16,3 +16,7 @@ dependencies {
     implementation 'commons-io:commons-io:2.6'
     testImplementation 'org.springframework.boot:spring-boot-starter-test:2.3.0.RELEASE'
 }
+
+sourceSets {
+    mainClassName = 'com.example.spring.event.TestEvent' as SourceSet
+}
