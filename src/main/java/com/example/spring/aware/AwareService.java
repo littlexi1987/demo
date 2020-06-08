@@ -35,7 +35,7 @@ public class AwareService implements BeanNameAware, ResourceLoaderAware, BeanFac
     }
 
     public void outputResult() throws IOException {
-        System.out.println("Bean Name is" + beanName);
+        System.out.println("Bean名称为：" + beanName);
         Resource resource = resourceLoader.getResource("classpath:resource_load.txt");
         System.out.println("ResourceLoader加载的配置文件内容为:" + IOUtils.toString(resource.getInputStream()));
         System.out.println("BeanFactory类工厂为:" + beanFactory.getClass().getName());
