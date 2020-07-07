@@ -10,5 +10,4 @@ public class TestEvent {
         publisher.publish("aaaaaaaa");
         context.close();
     }
-
 }

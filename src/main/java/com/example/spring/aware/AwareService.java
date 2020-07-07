@@ -11,6 +11,7 @@ import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 @Component
 public class AwareService implements BeanNameAware, ResourceLoaderAware, BeanFactoryAware {
@@ -37,7 +38,7 @@ public class AwareService implements BeanNameAware, ResourceLoaderAware, BeanFac
     public void outputResult() throws IOException {
         System.out.println("Bean Name is" + beanName);
         Resource resource = resourceLoader.getResource("classpath:resource_load.txt");
-        System.out.println("ResourceLoader加载的配置文件内容为:" + IOUtils.toString(resource.getInputStream()));
+        System.out.println("ResourceLoader加载的配置文件内容为:" + IOUtils.toString(resource.getInputStream(), StandardCharsets.UTF_8));
         System.out.println("BeanFactory类工厂为:" + beanFactory.getClass().getName());
     }
 
